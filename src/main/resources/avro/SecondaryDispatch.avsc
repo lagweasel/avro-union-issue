@@ -1,0 +1,41 @@
+[
+{
+  "namespace": "unionissue.avrogenerated",
+  "type": "enum",
+  "name": "SecondaryDispatchDateTimeTypeEnum",
+  "doc": "Enumeration of the Secondary date/time valued Dispatch Types. The rules defining which secondaries may accompany a primary dispatch type are not constrained/expressed in this model. Note FST == Frequency Start Time.",
+  "symbols": [
+    "FST"
+  ]
+},
+{
+  "namespace": "unionissue.avrogenerated",
+  "type": "record",
+  "name": "SecondaryDispatchDateTimeValue",
+  "doc": "Representation of a dispatch of a secondary date/time dispatch value associated with a Primary Dispatch Value for a given Dispatch Group",
+  "fields": [
+    {
+      "name": "dispatchType",
+      "doc": "The type of secondary value being dispatched. The rules defining which secondaries may accompany a primary dispatch type are not constrained/expressed in this model.",
+      "type": "SecondaryDispatchDateTimeTypeEnum"
+    },
+    {
+      "name": "dispatchValue",
+      "doc": "The date/time value of the type being dispatched (in millis from the 1 Jan 1970 00:00:00.000 UTC)",
+      "type": [
+        "null",
+        {
+          "type": "long",
+          "logicalType": "timestamp-millis"
+        }
+      ],
+      "default": null
+    },
+    {
+      "name": "dispatchChangeIndicator",
+      "doc": "Indicator whether this value has changed since the previous dispatch instruction",
+      "type": "boolean"
+    }
+  ]
+}
+]
