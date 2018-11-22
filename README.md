@@ -1,3 +1,6 @@
+# UPDATE
+This issue has been resolved (very promptly).
+
 # avro-union-issue
 Includes unit test that highlights issue with union of null/java.time.Instant
 Intended to be run against scatrin:avro repo which includes improvements to better support unions.
@@ -28,3 +31,5 @@ Tests run: 2, Failures: 0, Errors: 1, Skipped: 0
 # Desired result:
 Both tests (testWithInstantValue and testWithNullValue) should pass.
 
+# UPDATE
+This issue has been resolved (very promptly).
